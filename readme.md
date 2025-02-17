@@ -47,18 +47,24 @@ Para descobrir o camininho use
 pwd 
 ```
 
+### 4️⃣ Configurar o Caminho do DBT
+
 ### 5️⃣ Criar as Tabelas no PostgreSQL
 Você pode criar as tabelas manualmente usando DBeaver, pgAdmin ou diretamente no CLI do PostgreSQL. O arquivo sql está na pasta scripts/
 
 
-### 6️⃣ Instalar libs necessarias
+### 6️⃣ Alterar o profile.yml
+Não esqueça e alterar o profile.yml, siga o mesmo acordo com o docker-compose-yml
+Set o schema para 'dw'
+
+### 7️⃣ Instalar libs necessarias
 E claro, não podemos esquecer de rodar o comando
 ```
 pip install -r requirements.txt
 ```
 
-### 7️⃣ Rodar o Pipeline
-Agora, basta executar o main.py:
+### Agora basta rodar o Pipeline
+execute o main.py:
 ```
 python main.py
 ```
