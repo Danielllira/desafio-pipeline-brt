@@ -12,7 +12,7 @@ from prefect_pipeline.tasks import (
 )
 from prefect_pipeline.schedules import brt_pipeline_schedule
 
-DBT_PROJECT_PATH = "dbt/brt_data_pipeline" 
+DBT_PROJECT_PATH = '/Users/daniellira/Dev/desafio-pipeline-brt/dbt/brt_data_pipeline' 
 DB_URL = "postgresql://myuser:mypassword@localhost:5432/brt_database"
 
 with Flow("BRT Data Pipeline", schedule=brt_pipeline_schedule) as flow:
