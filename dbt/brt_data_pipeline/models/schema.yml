@@ -1,14 +1,50 @@
 version: 2
 
 models:
-  - name: brt_velocidade  
-    description: "Tabela derivada contendo ID do ônibus, posição e velocidade dos ônibus."  
+  - name: stage_brt_gps
+    description: "Tabela com dados GPS do BRT, sem dados duplicados."
     columns:
-      - name: id_onibus  
-        description: "ID do ônibus (código do ônibus)." 
-      - name: posicao_latitude  
-        description: "Latitude da posição do ônibus."  
-      - name: posicao_longitude  
-        description: "Longitude da posição do ônibus."  
-      - name: velocidade  
-        description: "Velocidade do ônibus em km/h."  
+      - name: id
+        description: "ID do registro."
+      - name: codigo
+        description: "Código do ônibus."
+      - name: placa
+        description: "Placa do ônibus."
+      - name: linha
+        description: "Número da linha do ônibus."
+      - name: latitude
+        description: "Latitude da posição do ônibus."
+      - name: longitude
+        description: "Longitude da posição do ônibus."
+      - name: datahora
+        description: "Data e hora da medição."
+      - name: data
+        description: "Data da medição."
+      - name: hora
+        description: "Hora da medição."
+      - name: velocidade
+        description: "Velocidade do ônibus em km/h."
+      - name: id_migracao_trajeto
+        description: "ID da migração do trajeto."
+      - name: sentido
+        description: "Sentido do trajeto (ida ou volta)."
+      - name: trajeto
+        description: "Descrição do trajeto."
+      - name: hodometro
+        description: "Hodômetro do ônibus."
+      - name: direcao
+        description: "Direção do ônibus."
+      - name: ignicao
+        description: "Indicação se a ignição do ônibus está ligada ou desligada."
+
+  - name: brt_gps_status
+    description: "Tabela derivada contendo apenas o ID do ônibus, posição e velocidade."
+    columns:
+      - name: id_onibus
+        description: "Código identificador do ônibus."
+      - name: latitude
+        description: "Latitude da posição do ônibus."
+      - name: longitude
+        description: "Longitude da posição do ônibus."
+      - name: velocidade
+        description: "Velocidade do ônibus em km/h."

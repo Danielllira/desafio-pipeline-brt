@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: stage
+  - name: stage_brt_gps
     schema: stage
     tables:
       - name: brt_gps

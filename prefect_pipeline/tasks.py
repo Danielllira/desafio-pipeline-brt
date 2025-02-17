@@ -10,6 +10,8 @@ import json
 from sqlalchemy import create_engine
 from sqlalchemy.exc import SQLAlchemyError
 
+import subprocess
+
 
 
 logger = logging.getLogger(__name__)
@@ -175,3 +177,22 @@ def load_data_into_postgres(file_path: str, db_url: str) -> None:
 
     except SQLAlchemyError as e:
         logger.error(f"Erro ao carregar dados no PostgreSQL: {e}")
+
+@task
+def run_dbt(dbt_project_path: str):
+    """
+    Executa o comando DBT para rodar os modelos do projeto DBT.
+    """
+    # Muda para o diretório do DBT
+    os.chdir(dbt_project_path)
+    
+    # Executa o comando dbt run
+    result = subprocess.run(["dbt", "run"], capture_output=True, text=True)
+    
+    # Log de sucesso ou falha
+    if result.returncode != 0:
+        logger.error(f"DBT run falhou: {result.stderr}")
+    else:
+        logger.info("DBT run executado com sucesso!")
+    
+    return result.stdout
