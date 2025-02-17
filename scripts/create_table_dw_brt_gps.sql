@@ -16,5 +16,5 @@ CREATE TABLE dw.brt_gps (
     trajeto                 VARCHAR(255),
     hodometro               REAL,
     direcao                 INT,
-    ignicao                 REAL
+    ignicao                 BOOLEAN
 );
