@@ -3,6 +3,6 @@ from prefect.schedules import IntervalSchedule
 
 brt_pipeline_schedule = IntervalSchedule(
     start_date=datetime.utcnow(),
-    end_date=datetime.utcnow() + timedelta(minutes=5),  # Para após 5 minutos
+    end_date=datetime.utcnow() + timedelta(minutes=10),  # Roda por 10 minutos
     interval=timedelta(minutes=1)
 )

@@ -1,1 +1,38 @@
+# Ambiente Virtual
 venv/
+env/
+
+# Dependências
+Pipfile.lock
+node_modules/
+
+# IDEs e Ferramentas de Desenvolvimento
+.vscode/
+.idea/
+*.iml
+
+# Arquivos de Log
+*.log
+
+# Arquivos Temporários
+*.swp
+*.bak
+*.tmp
+
+# Build e Distribuição
+build/
+dist/
+*.egg-info/
+
+# Banco de Dados
+*.db
+*.sqlite
+
+# Docker
+.docker/
+docker-compose.override.yml
+
+# Arquivos Sensíveis
+.env
+*.pem
+*.key
