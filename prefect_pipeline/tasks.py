@@ -183,6 +183,9 @@ def run_dbt(dbt_project_path: str):
     """
     Executa o comando DBT para rodar os modelos do projeto DBT.
     """
+    # Salva o diretório atual antes de mudar para o do DBT
+    current_dir = os.getcwd()
+    
     # Muda para o diretório do DBT
     os.chdir(dbt_project_path)
     
@@ -194,5 +197,8 @@ def run_dbt(dbt_project_path: str):
         logger.error(f"DBT run falhou: {result.stderr}")
     else:
         logger.info("DBT run executado com sucesso!")
+    
+    # Volta para o diretório original
+    os.chdir(current_dir)
     
     return result.stdout
