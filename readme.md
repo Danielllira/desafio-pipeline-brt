@@ -2,8 +2,8 @@
 
 ## 📌 Sobre o Projeto  
 Este projeto consiste em um pipeline de dados para coletar, armazenar e transformar informações de GPS dos ônibus do BRT do Rio de Janeiro. Utilizei **Prefect** para orquestração, **PostgreSQL** para armazenamento, **DBT** para transformação dos dados e **Docker** para subir o banco postgres.  
-
-![Arquitetura da Pipeline](pipeline_excalidraw.jpg)  
+ 
+![Pipeline BRT](https://raw.githubusercontent.com/Danielllira/desafio-pipeline-brt/main/img_readme/pipeline_excalidraw.jpg)
 
 ## 🚀 Como Rodar o Projeto  
 
