@@ -1,8 +1,7 @@
-{{ config(materialized='table', schema='stage') }}
-
+{{ config(materialized='table') }}
 SELECT
-    codigo 
-    latitude
-    longitude
-    velocidade  
-FROM {{ ref('brt_gps') }}  
+ codigo,
+ latitude,
+ longitude,
+ velocidade
+FROM {{ source('stage', 'brt_gps') }}

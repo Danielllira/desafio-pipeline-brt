@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: stage
+    schema: stage
+    tables:
+      - name: brt_gps
+        description: "Tabela com dados GPS do BRT"

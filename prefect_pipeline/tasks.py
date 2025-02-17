@@ -7,7 +7,7 @@ import os
 from datetime import datetime
 import json
 
-from sqlalchemy import create_engine, text
+from sqlalchemy import create_engine
 from sqlalchemy.exc import SQLAlchemyError
 
 
