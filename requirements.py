@@ -1,0 +1,7 @@
+prefect==0.15.9  
+pandas  
+requests  
+psycopg2-binary  
+sqlalchemy 
+dbt-core  
+pytz
