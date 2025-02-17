@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: brt_velocidade  
+    description: "Tabela derivada contendo ID do ônibus, posição e velocidade dos ônibus."  
+    columns:
+      - name: id_onibus  
+        description: "ID do ônibus (código do ônibus)." 
+      - name: posicao_latitude  
+        description: "Latitude da posição do ônibus."  
+      - name: posicao_longitude  
+        description: "Longitude da posição do ônibus."  
+      - name: velocidade  
+        description: "Velocidade do ônibus em km/h."  
