@@ -36,6 +36,9 @@ models:
         description: "Direção do ônibus."
       - name: ignicao
         description: "Indicação se a ignição do ônibus está ligada ou desligada."
+    tests:
+      - unique:
+          column_name: "(codigo || '-' || datahora)"
 
   - name: brt_gps_status
     description: "Tabela derivada contendo apenas o ID do ônibus, posição e velocidade."
