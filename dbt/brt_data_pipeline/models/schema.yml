@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: stage_brt_gps
+  - name: brt_gps
     description: "Tabela com dados GPS do BRT, sem dados duplicados."
     columns:
       - name: id
